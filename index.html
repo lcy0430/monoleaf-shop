@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모노리프 | 일상을 채우는 작은 물건들</title>
+  <meta name="description" content="모노리프 - 문구, 리빙, 테크 소품을 소개하는 가상 쇼핑몰">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍃</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">🍃 MONOLEAF</a>
+      <nav class="nav" id="nav">
+        <a href="#shop">상품</a>
+        <a href="#about">브랜드</a>
+        <a href="#reviews">후기</a>
+        <a href="#contact">문의</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="wishBtn" aria-label="찜 목록">♡ <span class="badge" id="wishCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="장바구니">🛒 <span class="badge" id="cartCount">0</span></button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="메뉴">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">2026 WINTER COLLECTION</p>
+          <h1>일상을 채우는<br><span>작은 물건들</span></h1>
+          <p class="hero-desc">오래 곁에 두고 싶은 문구, 리빙, 테크 소품을 고르고 골라 소개합니다.<br>지금 회원가입 없이 장바구니를 체험해 보세요.</p>
+          <div class="hero-cta">
+            <a href="#shop" class="btn btn-primary">쇼핑 시작하기</a>
+            <a href="#about" class="btn btn-ghost">브랜드 이야기</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>12</strong><span>엄선된 상품</span></li>
+            <li><strong>4.8</strong><span>평균 평점</span></li>
+            <li><strong>무료</strong><span>5만원 이상 배송</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="blob"></div>
+          <div class="float f1">☕</div>
+          <div class="float f2">📓</div>
+          <div class="float f3">🎧</div>
+          <div class="float f4">🪴</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="feature"><span>🚚</span><div><strong>빠른 배송</strong><p>오후 2시 전 주문 당일 출고</p></div></div>
+      <div class="feature"><span>🔄</span><div><strong>30일 교환</strong><p>사용 전이라면 언제든 교환</p></div></div>
+      <div class="feature"><span>🌱</span><div><strong>친환경 포장</strong><p>재활용 가능한 종이 포장</p></div></div>
+      <div class="feature"><span>💬</span><div><strong>친절한 상담</strong><p>평일 10시 ~ 18시 운영</p></div></div>
+    </section>
+
+    <section class="shop container" id="shop">
+      <div class="section-head">
+        <h2>오늘의 상품</h2>
+        <p>카테고리, 검색, 정렬로 원하는 상품을 찾아보세요.</p>
+      </div>
+      <div class="toolbar">
+        <div class="tabs" id="tabs" role="tablist"></div>
+        <div class="toolbar-right">
+          <input type="search" id="search" placeholder="상품 검색…" aria-label="상품 검색">
+          <select id="sort" aria-label="정렬">
+            <option value="popular">인기순</option>
+            <option value="low">낮은 가격순</option>
+            <option value="high">높은 가격순</option>
+            <option value="rating">평점순</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>검색 결과가 없습니다. 다른 키워드로 찾아보세요.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div class="about-visual" aria-hidden="true">🍃</div>
+        <div>
+          <p class="eyebrow">ABOUT US</p>
+          <h2>잎사귀 한 장처럼 가볍고 단정하게</h2>
+          <p>모노리프는 "적게 사고, 오래 쓰자"는 생각에서 시작한 작은 편집숍입니다. 매일 손이 가는 물건일수록 디자인과 품질이 중요하다고 믿습니다. 직접 써 보고 만족한 제품만 소개합니다.</p>
+          <ul class="checks">
+            <li>✔ 모든 상품 직접 사용 후 입점</li>
+            <li>✔ 국내 소규모 브랜드와 협업</li>
+            <li>✔ 판매 수익 일부 숲 가꾸기 기부</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews container" id="reviews">
+      <div class="section-head">
+        <h2>고객 후기</h2>
+        <p>모노리프를 먼저 경험한 분들의 이야기</p>
+      </div>
+      <div class="review-grid">
+        <blockquote class="review"><div class="stars">★★★★★</div><p>"리넨 노트 종이 질감이 정말 좋아요. 만년필로 써도 번지지 않아요."</p><cite>— 김*은 님</cite></blockquote>
+        <blockquote class="review"><div class="stars">★★★★★</div><p>"포장이 깔끔해서 선물용으로 딱이었습니다. 받은 친구가 너무 좋아했어요."</p><cite>— 박*호 님</cite></blockquote>
+        <blockquote class="review"><div class="stars">★★★★☆</div><p>"무드등 색감이 따뜻해서 방 분위기가 확 달라졌어요. 배송도 빨랐습니다."</p><cite>— 이*진 님</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div class="container news-inner">
+        <div>
+          <h2>새 상품 소식 받기</h2>
+          <p>이메일을 남겨 주시면 신상품과 할인 소식을 알려드려요. (데모 기능)</p>
+        </div>
+        <form id="newsForm" class="news-form">
+          <input type="email" id="newsEmail" placeholder="이메일 주소" required aria-label="이메일 주소">
+          <button class="btn btn-primary" type="submit">구독하기</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#" class="logo">🍃 MONOLEAF</a>
+        <p>일상을 채우는 작은 물건들</p>
+      </div>
+      <div class="footer-info">
+        <p>고객센터 1234-5678 · 평일 10:00 ~ 18:00</p>
+        <p>※ 이 사이트는 기말고사 과제용으로 제작된 가상 쇼핑몰이며 실제 판매·결제는 이루어지지 않습니다.</p>
+        <p>© 2026 MONOLEAF. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 장바구니 패널 -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="장바구니">
+    <div class="drawer-head">
+      <h3 id="drawerTitle">장바구니</h3>
+      <button class="icon-btn" id="closeDrawer" aria-label="닫기">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+    <div class="drawer-foot" id="drawerFoot">
+      <div class="row"><span>상품 금액</span><span id="subtotal">0원</span></div>
+      <div class="row"><span>배송비</span><span id="shipping">0원</span></div>
+      <p class="ship-hint" id="shipHint"></p>
+      <div class="row total"><span>합계</span><span id="total">0원</span></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">주문하기</button>
+    </div>
+  </aside>
+
+  <!-- 상품 상세 / 주문 완료 모달 -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal-card" id="modalCard"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
